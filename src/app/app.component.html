@@ -1,7 +1,23 @@
 <div class="container">
-    <app-photo-list [photos]="photos"></app-photo-list>
+    <app-photo-list [photos]="photos" (select)="onSelectPhotoHandler($event)"></app-photo-list>
     <app-load-more
             (onInitLoading)="onInitLoadingHandler($event)"
             [currentState]="loadingState"
     ></app-load-more>
+
+    <ng-template #modalWindowTemplate>
+        <div class="modal-overlay" (click)="onModalCloseHandler($event)"></div>
+        <div class="modal-window">
+            <div class="header">
+                <span class="title">{{ selectedPhoto.title }}</span>
+                <div class="controls">
+                    <div class="control close" (click)="onModalCloseHandler($event)">x</div>
+                </div>
+            </div>
+            <div class="content">
+                <app-photo-details [photo]="selectedPhoto"></app-photo-details>
+            </div>
+        </div>
+    </ng-template>
+    <ng-container #modalContainer></ng-container>
 </div>

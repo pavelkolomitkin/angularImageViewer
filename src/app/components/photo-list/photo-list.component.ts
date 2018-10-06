@@ -1,4 +1,4 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {PhotoModel} from '../../models/photo.model';
 
 @Component({
@@ -10,6 +10,8 @@ export class PhotoListComponent implements OnInit, OnDestroy {
 
   @Input() photos: Array<PhotoModel> = [];
 
+  @Output('select') select: EventEmitter<PhotoModel> = new EventEmitter<PhotoModel>();
+
   constructor() { }
 
   ngOnInit() {
@@ -18,6 +20,11 @@ export class PhotoListComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
 
+  }
+
+  onSelectPicture(photo: PhotoModel)
+  {
+    this.select.emit(photo);
   }
 
 }

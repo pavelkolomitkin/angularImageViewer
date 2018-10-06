@@ -3,7 +3,10 @@
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 25px;
+    padding-bottom: 25px;
     font-family: 'Arial', sans-serif;
+    position: relative;
+
 }
 
 app-photo-list
@@ -11,4 +14,60 @@ app-photo-list
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.modal-overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background: #000000;
+    opacity: 0.4;
+}
+
+.modal-window
+{
+    position: fixed;
+    /*transform: translateX(-50%) translateY(-50%);*/
+    background: #ffffff;
+    z-index: 100001;
+    padding: 15px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.modal-window .header
+{
+    position: relative;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.modal-window .header .title
+{
+    font-size: 16px;
+}
+
+.modal-window .header .controls
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.modal-window .header .controls > *
+{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modal-window .content
+{
+
 }
