@@ -1,5 +1,7 @@
-<app-photo-list [photos]="photos"></app-photo-list>
-<app-load-more
-        (onInitLoading)="onInitLoadingHandler($event)"
-        [currentState]="loadingState"
-></app-load-more>
+<div class="container">
+    <app-photo-list [photos]="photos"></app-photo-list>
+    <app-load-more
+            (onInitLoading)="onInitLoadingHandler($event)"
+            [currentState]="loadingState"
+    ></app-load-more>
+</div>

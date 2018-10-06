@@ -1,0 +1,15 @@
+.photo-item
+{
+
+}
+
+.photo-item .image-preview-container
+{
+    cursor: pointer;
+}
+
+.photo-item .photo-title
+{
+    color: #565656;
+    font-size: 13px;
+}

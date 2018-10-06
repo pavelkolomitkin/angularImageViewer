@@ -1,0 +1,22 @@
+.load-more
+{
+    text-align: center;
+}
+
+.load-more .load-button
+{
+    display: inline;
+    padding: 15px;
+    background: green;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.load-more .load-progress
+{
+    background: url('../../../assets/gif-load.gif');
+    width: 35px;
+    height: 35px;
+    display: inline;
+}
