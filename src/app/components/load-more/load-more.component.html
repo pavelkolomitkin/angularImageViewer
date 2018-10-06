@@ -1,0 +1,4 @@
+<div class="load-more" [ngSwitch]="_currentState">
+  <div *ngSwitchCase="States.READY" class="load-button" (click)="onLoadClickHandler($event)">Load more</div>
+  <div *ngSwitchCase="States.LOADING" class="load-progress">Loading...</div>
+</div>

@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseApiUrl: 'https://jsonplaceholder.typicode.com/',
+  PHOTO_LIST_PAGE_SIZE: 9
 };
